@@ -1,5 +1,6 @@
 import { useState, useEffect } from 'react'
 import './App.scss'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 
 function App() {
   const [count, setCount] = useState(0)
@@ -10,7 +11,7 @@ function App() {
     // 3. Keywords search bar, rounded corners for search bar and buttons
     // 4. Grid of book results, 5 columns in a desktop enviroment, 4 columns in a tablet environment, 3 columns in a phone environment
     <>
-      <header><h1>Google Books Search</h1></header>
+      <header><FontAwesomeIcon icon={["far", "book"]} /><h1> Google Books Search</h1></header>
       <main>
         <section className="main__description">
           <h2>Search Books</h2>
@@ -23,7 +24,14 @@ function App() {
             <button className='main__clear-button'>Clear</button><button className="main__search-button">Search</button>
           </form>
         </section>
-        <section className='main__results'></section>
+        <section className='main__results'>
+          <div className='main__results-card'>
+            <img src="https://picsum.photos/200" className='main__results-image' />
+            <h3 className='main__results-title'>Title</h3>
+            <h4 className='main__results-author'>Author</h4>
+            <p className='main__results-description'>Description</p>
+          </div>
+        </section>
       </main>
     </>
   )
