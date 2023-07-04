@@ -1,0 +1,22 @@
+@use './colours' as c;
+
+$radius: 5px;
+
+// Using each of the border attributes separately instead of just the border attribute. 
+// This will make it easier to adjust and finetune the borders.
+
+@mixin search-bar-border--light {
+    border-radius: $radius;
+    border-color: c.$ui-lightgrey;
+    border-width: 2px;
+    border-style: solid;
+}
+
+@mixin search-bar-border--dark {
+    border-radius: $radius;
+    border-color: c.$ui-darkgrey;
+    border-width: 2px;
+    border-style: solid;
+}
+
+
