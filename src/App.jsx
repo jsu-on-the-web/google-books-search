@@ -1,3 +1,4 @@
+import { Header } from './Header';
 import { useState, useEffect } from 'react'
 import './App.scss'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
@@ -11,7 +12,7 @@ function App() {
     // 3. Keywords search bar, rounded corners for search bar and buttons
     // 4. Grid of book results, 5 columns in a desktop enviroment, 4 columns in a tablet environment, 3 columns in a phone environment
     <>
-      <header><FontAwesomeIcon icon={["far", "book"]} /><h1> Google Books Search</h1></header>
+      <Header     />
       <main>
         <section className="main__description">
           <h2>Search Books</h2>
@@ -38,3 +39,5 @@ function App() {
 }
 
 export default App
+
+  

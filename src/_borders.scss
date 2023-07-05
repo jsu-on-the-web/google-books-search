@@ -1,4 +1,4 @@
-@use './colours' as c;
+@use './colours';
 
 $radius: 5px;
 
@@ -7,14 +7,14 @@ $radius: 5px;
 
 @mixin search-bar-border--light {
     border-radius: $radius;
-    border-color: c.$ui-lightgrey;
+    border-color: $ui-light-grey;
     border-width: 2px;
     border-style: solid;
 }
 
 @mixin search-bar-border--dark {
     border-radius: $radius;
-    border-color: c.$ui-darkgrey;
+    border-color: $ui-dark-grey;
     border-width: 2px;
     border-style: solid;
 }
