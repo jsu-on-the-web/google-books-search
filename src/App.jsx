@@ -1,4 +1,4 @@
-import { SearchBar } from './SearchBar';
+import { SearchBar } from './components/SearchBar/SearchBar';
 import { BookGrid } from './components/BookGrid/BookGrid';
 import { BookCard } from './components/BookCard/BookCard';
 import { PageDescription } from './components/PageDescription/PageDescription';
@@ -9,7 +9,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 
 function App() {
   const [count, setCount] = useState(0)
-  
+
 
   return (
     // 1. Heading bar, google coloured text and a padding of 0.5rem
@@ -20,9 +20,7 @@ function App() {
       <Header />
       <main>
         <PageDescription />
-        <section className="main__search">
-          <SearchBar />
-        </section>
+        <SearchBar />
         <BookGrid />
       </main>
     </>
