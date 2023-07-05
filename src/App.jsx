@@ -12,7 +12,7 @@ function App() {
     // 3. Keywords search bar, rounded corners for search bar and buttons
     // 4. Grid of book results, 5 columns in a desktop enviroment, 4 columns in a tablet environment, 3 columns in a phone environment
     <>
-      <Header     />
+      <Header title="Google Books Search"/>
       <main>
         <section className="main__description">
           <h2>Search Books</h2>
