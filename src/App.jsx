@@ -9,6 +9,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 
 function App() {
   const [count, setCount] = useState(0)
+  
 
   return (
     // 1. Heading bar, google coloured text and a padding of 0.5rem
@@ -28,16 +29,4 @@ function App() {
   )
 }
 
-export default App
-
-
-function undefined({ }) {
-  return (<section className='main__results'>
-    <BookCard title="Test" author="John Doe" description="This is a book" />
-  </section>);
-}
-
-    function undefined({}) {
-      return ();
-    }
-  
+export default App;
