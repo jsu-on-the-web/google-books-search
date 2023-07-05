@@ -1,3 +1,4 @@
+import { PageDescription } from './components/PageDescription/PageDescription';
 import { Header } from './components/Header/Header';
 import { useState, useEffect } from 'react'
 import './App.scss'
@@ -14,10 +15,7 @@ function App() {
     <>
       <Header title="Google Books Search"/>
       <main>
-        <section className="main__description">
-          <h2>Search Books</h2>
-          <p>Enter keywords to find books in the Google Books database.</p>
-        </section>
+        <PageDescription     />
         <section className="main__search">
           <form action="" className="main__search-form">
             <label htmlFor="search" className="main__search-label">Keywords</label>
