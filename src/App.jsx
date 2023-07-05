@@ -1,3 +1,4 @@
+import { SearchBar } from './SearchBar';
 import { BookGrid } from './components/BookGrid/BookGrid';
 import { BookCard } from './components/BookCard/BookCard';
 import { PageDescription } from './components/PageDescription/PageDescription';
@@ -15,15 +16,11 @@ function App() {
     // 3. Keywords search bar, rounded corners for search bar and buttons
     // 4. Grid of book results, 5 columns in a desktop enviroment, 4 columns in a tablet environment, 3 columns in a phone environment
     <>
-      <Header title="Google Books Search" />
+      <Header />
       <main>
         <PageDescription />
         <section className="main__search">
-          <form action="" className="main__search-form">
-            <label htmlFor="search" className="main__search-label">Keywords</label>
-            <input type="text" name="search" id="search" className="main__search-input" />
-            <button className='main__clear-button'>Clear</button><button className="main__search-button">Search</button>
-          </form>
+          <SearchBar />
         </section>
         <BookGrid />
       </main>
@@ -39,3 +36,8 @@ function undefined({ }) {
     <BookCard title="Test" author="John Doe" description="This is a book" />
   </section>);
 }
+
+    function undefined({}) {
+      return ();
+    }
+  
