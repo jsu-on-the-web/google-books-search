@@ -1,0 +1,23 @@
+@use '../../borders' as b;
+/*=============================================
+=                Generic Selectors            =
+=============================================*/
+
+
+/*=============================================
+=                  Class Selectors            =
+=============================================*/
+
+.main {
+    &__results-card {
+        @include b.round-border--light;
+        background-color: white;
+    }
+
+    &__results-title {
+        font-size: 72pt;
+    }
+}
+
+
+

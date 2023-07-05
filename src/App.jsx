@@ -34,4 +34,10 @@ function App() {
 
 export default App
 
-  
+
+    function undefined({}) {
+      return (<section className='main__results'>
+          <BookCard title="Test" author="John Doe" description="This is a book" />
+        </section>);
+    }
+    
