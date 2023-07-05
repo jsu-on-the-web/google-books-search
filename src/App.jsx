@@ -25,7 +25,7 @@ function App() {
           </form>
         </section>
         <section className='main__results'>
-          <BookCard     />
+          <BookCard title="Test" author="John Doe" description="This is a book"  />
         </section>
       </main>
     </>
