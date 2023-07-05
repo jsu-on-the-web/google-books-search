@@ -31,7 +31,12 @@ export const fetchBooksBySearchTerm = async (searchTerm = '') => {
 
     //console.log(data.items);
     // STUB: Use something like the parameters below to set the description for the BookCards
-    console.log((data.items[0].volumeInfo.description).substring(0, 100) + "...");
+    //console.log((data.items[0].volumeInfo.description).substring(0, 100) + "...");
+
+    // STUB: Destructuring testing
+    // const { title, authors, description } = data.items[0].volumeInfo;
+    // let authorString = authors.join(', ');
+    // console.log(title, authorString, description);
     return data.items;
 }
 
