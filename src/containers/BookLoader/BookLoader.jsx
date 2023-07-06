@@ -6,7 +6,7 @@ import { fetchBooksBySearchTerm } from '../../services/book-services';
 
 const BookLoader = ({ searchTerm }) => {
     const [isLoading, setIsLoading] = useState(false);
-    const { error, setError } = useState(null);
+    const [ error, setError ] = useState(null);
 
     const [books, setBooks] = useState([]);
 

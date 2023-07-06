@@ -5,6 +5,7 @@ import { PageDescription } from './components/PageDescription/PageDescription';
 import { Header } from './components/Header/Header';
 import { useState, useEffect } from 'react'
 import './App.scss'
+import BookLoader from './containers/BookLoader/BookLoader';
 
 
 
@@ -21,7 +22,7 @@ function App() {
       <main>
         <PageDescription />
         <SearchBar />
-        <BookGrid />
+        <BookLoader searchTerm = {searchTerm}/>
       </main>
     </>
   )
