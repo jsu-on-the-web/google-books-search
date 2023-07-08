@@ -1,6 +1,4 @@
 import { SearchBar } from './components/SearchBar/SearchBar';
-import { BookGrid } from './components/BookGrid/BookGrid';
-import { BookCard } from './components/BookCard/BookCard';
 import { PageDescription } from './components/PageDescription/PageDescription';
 import { Header } from './components/Header/Header';
 import { useState, useEffect } from 'react'
@@ -10,7 +8,11 @@ import BookLoader from './containers/BookLoader/BookLoader';
 
 
 function App() {
-  const [searchTerm, setSearchTerm] = useState("");
+  const [searchTerm, setSearchTerm] = useState(" ");
+
+  const handleSearch = (e) => {
+    setSearchTerm(e.target.value);
+  }
 
   return (
     // 1. Heading bar, google coloured text and a padding of 0.5rem
@@ -21,8 +23,8 @@ function App() {
       <Header />
       <main>
         <PageDescription />
-        <SearchBar />
-        <BookLoader searchTerm = {searchTerm}/>
+        <SearchBar handleSubmit={handleSearch} />
+        <BookLoader searchTerm={searchTerm} />
       </main>
     </>
   )
