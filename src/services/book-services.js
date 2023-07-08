@@ -40,6 +40,25 @@ export const fetchBooksBySearchTerm = async (searchTerm = '') => {
     return data.items;
 }
 
+export const extractBookFetchData = (inputData) => {
+    return inputData.map((book) => {
+        // Destructure the data we need from the BookInfo object
+        const { title, authors, description, averageRating = 0, language, publishedDate, publisher } = book.volumeInfo;
+        const thumbnail = book.volumeInfo.imageLinks?.thumbnail;
+
+        return {
+            title,
+            authors,
+            description,
+            thumbnail,
+            averageRating,
+            language,
+            publishedDate,
+            publisher
+        };
+    })
+}
+
 /**
  * Cleans the given string for search by replacing spaces with "%20".
  *
@@ -51,7 +70,8 @@ export const fetchBooksBySearchTerm = async (searchTerm = '') => {
 //     return searchTerm.replace(/ /g, "%20");
 // }
 
-console.log(fetchBooksBySearchTerm('reading books'));
+//fetchBooksBySearchTerm('reading books');
+console.log(extractBookFetchData(await fetchBooksBySearchTerm('hobbit')))
 /*----------  Variable Declaration  ----------*/
 
 
