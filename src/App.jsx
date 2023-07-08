@@ -10,8 +10,8 @@ import BookLoader from './containers/BookLoader/BookLoader';
 function App() {
   const [searchTerm, setSearchTerm] = useState(" ");
 
-  const handleSearch = (e) => {
-    setSearchTerm(e.target.value);
+  const handleSearch = (value) => {
+    setSearchTerm(value);
   }
 
   return (
