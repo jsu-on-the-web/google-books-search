@@ -11,7 +11,7 @@ const BookLoader = ({ searchTerm }) => {
     const [books, setBooks] = useState([]);
 
     useEffect(() => {
-        // Reset the error and jokes states
+        // Reset the error and book states
         setError(null);
         setBooks([]);
 
