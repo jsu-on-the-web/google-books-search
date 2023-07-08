@@ -1,5 +1,5 @@
 import React from "react";
-import styles from './BookCard.module.scss'
+import './BookCard.module.scss'
 
 export function BookCard({ coverThumbnailSrc = "https://picsum.photos/200", title, authors, description }) {
   return (
