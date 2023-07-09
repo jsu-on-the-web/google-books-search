@@ -9,7 +9,7 @@ import { useState, useEffect } from "react";
  * @param {number} despawnDelay - the delay in milliseconds before the component is despawned
  * @return {boolean} true if the component has transitioned in, false otherwise
  */
-const useSpawnTransition = (isSpawned, despawnDelay) => {
+export const useTransitionOnSpawn = (isSpawned, despawnDelay) => {
     const [hasTransitionedIn, setHasTransitionedIn] = useState(false);
 
     // Making use of useEffect for the actual logic of the hook
@@ -34,4 +34,4 @@ const useSpawnTransition = (isSpawned, despawnDelay) => {
     return hasTransitionedIn;
 }
 
-export default useSpawnTransition;
+export default useTransitionOnSpawn;

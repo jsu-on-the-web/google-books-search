@@ -21,7 +21,15 @@ export function BookGrid({ results }) {
         return (
             <section className={styles["book-grid"]}>
                 {results.map((bookInfo) => (
-                    <BookCard key={bookInfo.id} coverThumbnailSrc={bookInfo.thumbnail} title={bookInfo.title} authors={bookInfo.authors} description={bookInfo.description} />
+                    <BookCard
+                        key={bookInfo.id}
+                        coverThumbnailSrc={bookInfo.thumbnail}
+                        title={bookInfo.title}
+                        authors={bookInfo.authors}
+                        description={bookInfo.description}
+                        isSpawned={true}
+                        spawnDelay={1000 + bookInfo.id * 100}
+                    />
                 ))}
             </section>
         );
