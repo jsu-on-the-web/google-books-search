@@ -8,10 +8,10 @@
 =                  Class Selectors            =
 =============================================*/
 
-.main__results-card {
+.results-card {
         @include b.round-border--light;
         color: pink;
-    &__results-title {
+    &__title {
         font-size: 72pt;
     }
 }

@@ -25,7 +25,7 @@ export const fetchBooksBySearchTerm = async (searchTerm = '') => {
     }
 
     const data = await response.json();
-    if (data.items.length === 0) {
+    if (data.items.length === 0 || data.items === undefined) {
         throw NoBooksFoundError;
     }
 
