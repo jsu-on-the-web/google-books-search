@@ -17,7 +17,7 @@ export const fetchBooksBySearchTerm = async (searchTerm = '') => {
     //const cleanedSearchTerm = cleanStringForSearch(searchTerm);
 
     const response = await fetch(
-        `https://www.googleapis.com/books/v1/volumes?q=${searchTerm}`
+        `https://www.googleapis.com/books/v1/volumes?q=${searchTerm}&maxResults=20`
     );
 
     if (!response.ok) {
@@ -25,7 +25,7 @@ export const fetchBooksBySearchTerm = async (searchTerm = '') => {
     }
 
     const data = await response.json();
-    if (data.items.length === 0 || data.items === undefined) {
+    if (data.items === undefined || data.items.length === 0) {
         throw NoBooksFoundError;
     }
 
