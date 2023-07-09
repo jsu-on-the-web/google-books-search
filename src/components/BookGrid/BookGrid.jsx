@@ -14,7 +14,7 @@ export function BookGrid({ results }) {
         <section className="book-grid">
             {results.map((bookInfo) => (
                 // TODO: Passing the info into the BookCard component as props
-                <BookCard key={bookInfo.id} coverThumbnailSrc={bookInfo.thumbnail} title={bookInfo.title} authors={bookInfo.authors.join(', ')} description={bookInfo.description.substring(0, 200) + '...'} />
+                <BookCard key={bookInfo.id} coverThumbnailSrc={bookInfo.thumbnail} title={bookInfo.title} authors={bookInfo.authors.join(', ') ?? 'N/A'} description={bookInfo.description.substring(0, 200) + '...' ?? 'N/A'} />
             ))}
         </section>
     );
