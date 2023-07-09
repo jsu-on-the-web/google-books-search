@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import { Rating } from "@mui/material";
 import { usePortal } from 'react-dom';
-import { LanguageFlag, getEmoji } from "language-flag-colors";
+import { getEmoji } from "language-flag-colors";
 import styles from './BookModal.module.scss'
 export function BookModal({ }) {
     return (
