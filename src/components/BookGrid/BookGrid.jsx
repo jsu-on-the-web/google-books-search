@@ -6,16 +6,23 @@ export function BookGrid({ results }) {
     // An array to hold the arrays data to pass down into BookCards
     const [bookData, setBookData] = useState([]);
 
+    useEffect(() => {
+        if (results) {
+            setBookData(results);
+        }
+    }, [results]);
 
-    const extractData = (results) => {
-        setBookData(results); // TODO: 
+    // We don't want to render the book grid if there's no results
+    if (!results) {
+        return null;
     }
+    
 
-    return (
-        <section className={styles["book-grid"]}>
-            {results.map((bookInfo) => (
-                <BookCard key={bookInfo.id} coverThumbnailSrc={bookInfo.thumbnail} title={bookInfo.title} authors={bookInfo.authors.join(', ')} description={bookInfo.description.substring(0, 200) + '...'} />
-            ))}
-        </section>
-    );
-}
+        return (
+            <section className={styles["book-grid"]}>
+                {results.map((bookInfo) => (
+                    <BookCard key={bookInfo.id} coverThumbnailSrc={bookInfo.thumbnail} title={bookInfo.title} authors={bookInfo.authors} description={bookInfo.description} />
+                ))}
+            </section>
+        );
+    }
