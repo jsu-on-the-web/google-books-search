@@ -2,7 +2,10 @@ import { useState, useEffect } from "react";
 import styles from './BookCard.module.scss'
 
 export function BookCard({ coverThumbnailSrc = "https://picsum.photos/200", title, authors, description }) {
-  const [bookDescription, setBookDescription] = useState('');
+  const bookDescription = description ? description.substring(0, 200) + '...' : 'N/A';
+  const bookAuthors = authors ? authors.join(', ') : 'N/A';
+
+/*   const [bookDescription, setBookDescription] = useState('');
   const [bookAuthors, setBookAuthors] = useState('');
 
   // Use effects to check the author and description and replace them with N/As if not present.
@@ -20,7 +23,7 @@ export function BookCard({ coverThumbnailSrc = "https://picsum.photos/200", titl
     } else {
       setBookAuthors("N/A");
     }
-  }, [authors]);
+  }, [authors]); */
 
   return (
     <div className={styles["results-card"]}>
