@@ -18,9 +18,9 @@ export function SearchBar({ handleSubmit }) {
     return (
         <section className={styles["main__search"]}>
             <form className={styles["main__search-form"]} onSubmit={onSubmit}>
-                <label htmlFor="search" className="main__search-label"><h3>Keywords</h3></label>
-                <input type="text" name="search" id="search" className="main__search-input" value ={searchInput} onChange={onChange}/>
-                <div className="main__search-btns">
+                <label htmlFor="search" className={styles["main__search-label"]}><h3>Keywords</h3></label>
+                <input type="text" name="search" id="search" className={styles["main__search-input"]} value ={searchInput} onChange={onChange}/>
+                <div className={styles["main__search-buttons"]}>
                     <button className='main__clear-button'>Clear</button><button className="main__search-button">Search</button>
                 </div>
             </form>
