@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { fetchBooksBySearchTerm } from "../../services/book-services";
+import styles from './SearchBar.module.scss'
 export function SearchBar({ handleSubmit }) {
     const [searchInput, setSearchInput] = useState("");
 
@@ -15,11 +16,13 @@ export function SearchBar({ handleSubmit }) {
     }
 
     return (
-        <section className="main__search">
-            <form className="main__search-form" onSubmit={onSubmit}>
-                <label htmlFor="search" className="main__search-label">Keywords</label>
+        <section className={styles["main__search"]}>
+            <form className={styles["main__search-form"]} onSubmit={onSubmit}>
+                <label htmlFor="search" className="main__search-label"><h3>Keywords</h3></label>
                 <input type="text" name="search" id="search" className="main__search-input" value ={searchInput} onChange={onChange}/>
-                <button className='main__clear-button'>Clear</button><button className="main__search-button">Search</button>
+                <div className="main__search-btns">
+                    <button className='main__clear-button'>Clear</button><button className="main__search-button">Search</button>
+                </div>
             </form>
         </section>
     );
