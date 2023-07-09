@@ -1,14 +1,15 @@
-@use "../../borders" as b;
 /*=============================================
-=                Generic Selectors            =
+=            General Selectors              =
 =============================================*/
 
 /*=============================================
 =                  Class Selectors            =
 =============================================*/
 
-.results-card {
-	@include b.round-border--light;
-	margin: 10px;
-	padding: 1rem;
+.book-grid {
+	display: grid;
+	grid-template-columns: repeat(5, 1fr);
+	grid-template-rows: repeat(2, 1fr);
+	grid-column-gap: 10px;
+	grid-row-gap: 10px;
 }

@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
 import { BookCard } from "../BookCard/BookCard";
+import styles from './BookGrid.module.scss';
 
 export function BookGrid({ results }) {
     // An array to hold the arrays data to pass down into BookCards
@@ -11,9 +12,8 @@ export function BookGrid({ results }) {
     }
 
     return (
-        <section className="book-grid">
+        <section className={styles["book-grid"]}>
             {results.map((bookInfo) => (
-                // TODO: Passing the info into the BookCard component as props
                 <BookCard key={bookInfo.id} coverThumbnailSrc={bookInfo.thumbnail} title={bookInfo.title} authors={bookInfo.authors.join(', ')} description={bookInfo.description.substring(0, 200) + '...'} />
             ))}
         </section>
