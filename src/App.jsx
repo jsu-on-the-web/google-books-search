@@ -1,3 +1,4 @@
+import { BookModal } from './components/BookModal/BookModal';
 import { SearchBar } from './components/SearchBar/SearchBar';
 import { PageDescription } from './components/PageDescription/PageDescription';
 import { Header } from './components/Header/Header';
@@ -25,6 +26,7 @@ function App() {
         <PageDescription />
         <SearchBar handleSubmit={handleSearch} />
         <BookLoader searchTerm={searchTerm} />
+        <BookModal     />
       </main>
     </>
   )
