@@ -38,6 +38,7 @@ const BookLoader = ({ searchTerm = "" }) => {
             {isLoading && <FontAwesomeIcon icon={faSpinner} spin />}
             {!isLoading && error && <p>{error.message}</p>}
             {!isLoading && books.length > 0 && <BookGrid results={books} />}
+            
         </>
     )
 }
