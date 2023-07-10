@@ -4,6 +4,10 @@ import { usePortal } from 'react-dom';
 import { getEmoji } from "language-flag-colors";
 import styles from './BookModal.module.scss'
 export function BookModal({ book, onClose }) {
+
+    if (book === null) {
+        return null;
+    }
     return (
         <div className={styles['book-modal']}>
             <img src="https://picsum.photos/200" alt="" className='book-modal__image' />

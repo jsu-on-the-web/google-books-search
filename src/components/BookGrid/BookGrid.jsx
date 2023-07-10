@@ -33,9 +33,9 @@ export function BookGrid({ results }) {
                 {bookData.map((bookInfo) => (
                     <BookCard key={bookInfo.id} coverThumbnailSrc={bookInfo.thumbnail} title={bookInfo.title} authors={bookInfo.authors} description={bookInfo.description} onClick={handleBookClick}/>
                 ))}
-                {selectedBook && (
+                {selectedBook && 
                     <BookModal book={selectedBook} onClose={handleModalClose} />
-                )}
+                }
             </section>
         );
     }
