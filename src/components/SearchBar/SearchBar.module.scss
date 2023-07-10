@@ -1,0 +1,39 @@
+@use '../../borders' as b;
+/*=============================================
+=            General Selectors            =
+=============================================*/
+
+
+
+/*=============================================
+=            Class Selectors            =
+=============================================*/
+
+.main {
+
+    
+    &__search {
+    display: flex;
+    flex-direction: column;
+    }
+
+    &__search-label {
+        margin-bottom: 1rem;
+    }
+
+    &__search-form {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    &__search-input {
+        @include b.round-border--light;
+    }
+    
+    &__search-buttons {
+        margin: 1rem;
+    }
+}
+
+

@@ -1,0 +1,22 @@
+@use './colours' as c;
+
+$radius: 5px;
+
+// Using each of the border attributes separately instead of just the border attribute. 
+// This will make it easier to adjust and finetune the borders.
+
+@mixin round-border--light {
+    border-radius: $radius;
+    border-color: c.$ui-light-grey;
+    border-width: 2px;
+    border-style: solid;
+}
+
+@mixin round-border--dark {
+    border-radius: $radius;
+    border-color: c.$ui-dark-grey;
+    border-width: 2px;
+    border-style: solid;
+}
+
+
