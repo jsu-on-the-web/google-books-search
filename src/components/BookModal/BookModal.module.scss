@@ -1,0 +1,26 @@
+@use '../../borders' as b;
+@use '../../colours' as c;
+/*=============================================
+=            Generic Selectors            =
+=============================================*/
+
+
+/*=============================================
+=            Class Selectors            =
+=============================================*/
+
+.book-modal {
+    @include b.round-border--light;
+    max-width: 30vw;
+    padding: 5rem;
+    background-color: c.$ui-dark-grey;
+
+    position: fixed;
+    top: 25%;
+    left: 42%;
+    box-shadow: 0px 10px 5px 2px c.$ui-grey;
+
+}
+
+
+

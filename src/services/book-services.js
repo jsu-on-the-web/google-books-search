@@ -43,7 +43,7 @@ export const fetchBooksBySearchTerm = async (searchTerm = '') => {
 export const extractBookFetchData = (inputData) => {
     return inputData.map((book) => {
         // Destructure the data we need from the BookInfo object
-        const { title, authors, description, averageRating = 0, language, publishedDate, publisher } = book.volumeInfo;
+        const { title, authors, description = '', averageRating = 0, language, publishedDate, publisher } = book.volumeInfo;
         const thumbnail = book.volumeInfo.imageLinks?.thumbnail;
 
         return {

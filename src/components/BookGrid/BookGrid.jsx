@@ -16,7 +16,6 @@ export function BookGrid({ results }) {
     if (!results) {
         return null;
     }
-    
 
         return (
             <section className={styles["book-grid"]}>
