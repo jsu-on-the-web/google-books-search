@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import styles from './BookCard.module.scss'
 
-export function BookCard({ coverThumbnailSrc = "https://picsum.photos/200", title, authors, description }) {
+export function BookCard({ book, coverThumbnailSrc = "https://picsum.photos/200", title, authors, description, onClick}) {
   const bookDescription = description ? description.substring(0, 200) + '...' : 'N/A';
   const bookAuthors = authors ? authors.join(', ') : 'N/A';
 
@@ -26,7 +26,7 @@ export function BookCard({ coverThumbnailSrc = "https://picsum.photos/200", titl
   }, [authors]); */
 
   return (
-    <div className={styles["results-card"]}>
+    <div className={styles["results-card"]} onClick={() => onClick(book)}>
       <img src={coverThumbnailSrc} className='results-card__image' />
       <h3 className='results-card__title'>{title}</h3>
       <h4 className='results-card__author'>{bookAuthors}</h4>

@@ -5,6 +5,21 @@ import { getEmoji } from "language-flag-colors";
 import styles from './BookModal.module.scss'
 export function BookModal({ book, onClose }) {
 
+
+    useEffect(() => {
+        const handleEscKey = (event) => {
+            if (event.keyCode === 27) {
+                // Close the modal on Escape key press
+                onClose();
+            }
+        };
+
+        document.addEventListener("keydown", handleEscKey);
+        return () => {
+            document.removeEventListener("keydown", handleEscKey);
+        };
+    }, [onClose]);
+
     if (book === null) {
         return null;
     }

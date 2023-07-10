@@ -2,6 +2,7 @@ import { useState, useEffect } from "react";
 import { BookCard } from "../BookCard/BookCard";
 import { BookModal } from "../BookModal/BookModal";
 import styles from './BookGrid.module.scss';
+import { createPortal } from "react-dom";
 
 export function BookGrid({ results }) {
     // An array to hold the arrays data to pass down into BookCards
@@ -31,10 +32,13 @@ export function BookGrid({ results }) {
         return (
             <section className={styles["book-grid"]}>
                 {bookData.map((bookInfo) => (
-                    <BookCard key={bookInfo.id} coverThumbnailSrc={bookInfo.thumbnail} title={bookInfo.title} authors={bookInfo.authors} description={bookInfo.description} onClick={handleBookClick}/>
+                    <BookCard key={bookInfo.id} book={bookInfo} coverThumbnailSrc={bookInfo.thumbnail} title={bookInfo.title} authors={bookInfo.authors} description={bookInfo.description} onClick={handleBookClick}/>
                 ))}
                 {selectedBook && 
-                    <BookModal book={selectedBook} onClose={handleModalClose} />
+                    createPortal(
+                        <BookModal book={selectedBook} onClose={handleModalClose} />,
+                        document.getElementById('root')
+                    )
                 }
             </section>
         );
