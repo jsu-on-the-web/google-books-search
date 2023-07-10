@@ -26,7 +26,7 @@ function App() {
         <PageDescription />
         <SearchBar handleSubmit={handleSearch} />
         <BookLoader searchTerm={searchTerm} />
-        <BookModal     />
+        {/* <BookModal     /> */}
       </main>
     </>
   )
